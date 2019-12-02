@@ -1,0 +1,286 @@
+<!-- HEADER | CHECKED FOR ACCESSIBILITY  -->
+
+<!-- MODAL - SEARCH  -->
+<div class="modal modal-top-nav fade" id="search" tabindex="-1" role="dialog" aria-labelledby="search-label">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+        <h4 class="modal-title" id="search-label">Find what you need to succeed.</h4>
+      </div>
+      <div class="modal-body">
+        <div class="search-box" id="search-box-nav">
+          <div class="input-group input-group-lg search-home">
+            <input type="text" class="form-control" placeholder="Search by ISBN, Title, Author, Keyword" onkeyup="liveSearch(this)" >
+            <a class="input-group-addon btn-solid-light"><img src="images/search.svg" alt="search icon"/></a></div>
+          <ul class="search-results">
+            <!-- results go here -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / MODAL - SEARCH --> 
+
+<!-- MODAL - PENDING ACCESS  -->
+<div class="modal fade" id="ir-pending-status" tabindex="-1" role="dialog" aria-labelledby="instructor pending status" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="ir-pending-status-header">Instructor Access Status</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert warning alert-top" style="margin:0;">
+          <div class="alert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g>
+                <rect x="11" y="10" width="2" height="4"></rect>
+                <rect x="11" y="15" width="2" height="2"></rect>
+                <path d="M21.71,19.13,13.06,3.85A1.31,1.31,0,0,0,12,3.08a1.31,1.31,0,0,0-1.08.77L2.26,19.13c-.59,1-.11,1.87,1.08,1.87H20.63C21.82,21,22.3,20.15,21.71,19.13ZM4.63,19,12,6l7.35,13Z"></path>
+              </g>
+            </svg>
+          </div>
+          <span><strong>PENDING: We are verifying your instructor status.</strong> It takes up to two business days after you register. We will e-mail you when the status of your request has changed. You may continue to browse our catalog and to request exam copies or instructor resources. These requests will be processed after your instructor status is verified.</span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / MODAL - PENDING ACCESS  --> 
+
+<!-- MODAL - DENIED ACCESS  -->
+<div class="modal fade" id="ir-access-status" tabindex="-1" role="dialog" aria-labelledby="instructor access status" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="ir-access-status-header">Instructor Access Status</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+      <div class="modal-body">
+        <div class="alert error alert-dismissible" role="alert" style="margin:0;">
+          <div class="alert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2ZM4,12A8,8,0,0,1,16.82,5.66l-11.37,11A8,8,0,0,1,4,12Zm8,8A8,8,0,0,1,6.79,18.1l11.45-11A8,8,0,0,1,12,20Z"></path>
+            </svg>
+          </div>
+          <span><strong>We're Sorry.</strong> We were unable to verify your instructor status. Please contact your sales representative if you have any questions. Thank you. <a class="link-inline" href="#">Click here to find your rep.</a></span> </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / MODAL - DENIED ACCESS  --> 
+
+<!-- MODAL - CART  -->
+<div class="modal modal-top-nav fade" id="cartmodal" tabindex="-1" role="dialog" aria-labelledby="shoppingcart" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="shoppingcart">In Your Cart (3)</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+      <div class="modal-body">
+                    <div class="alert warning alert-top" style="margin-top:0;">
+          <div class="alert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g>
+                <rect x="11" y="10" width="2" height="4"></rect>
+                <rect x="11" y="15" width="2" height="2"></rect>
+                <path d="M21.71,19.13,13.06,3.85A1.31,1.31,0,0,0,12,3.08a1.31,1.31,0,0,0-1.08.77L2.26,19.13c-.59,1-.11,1.87,1.08,1.87H20.63C21.82,21,22.3,20.15,21.71,19.13ZM4.63,19,12,6l7.35,13Z"></path>
+              </g>
+            </svg>
+          </div>
+          <span><strong>You've already added this product to the cart; you can only request one of each sample.</strong></span></div>
+
+        <div id="table-responsive-cart">
+                       <div id="orderhistory" class="table-responsive">
+                  <table class="table table-striped table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col" width="50%">Product</th>
+                        <th scope="col">Format</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">Price</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody class="small">
+                                          <tr>
+                        <td><div class="row">
+                            <div class="col-sm-2 col-xs-6"> <img alt="Psychology in Everyday Life
+
+" class="order-thumbnail" src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/258W/9781319013738.jpg"> </div>
+                            <div class="col-sm-10 col-xs-12">
+                              <div class="product-specs-orders">
+                                <h2 class="h-size5"><a href="#" class="link-inline">Psychology in Everyday Life</a></h2>
+                                <p>Fourth&nbsp;Edition<span class="specs-divider"> | </span> ©2017</p>
+                                <p>David G. Myers; C. Nathan DeWall
+</p></div>
+                            </div>
+                          </div></td>
+                        <td>e-Book</td>
+                        <td><p class="isbn" id="isbn03">9780000000000</p></td>
+                        <td><strong>FREE</strong></td>
+                        <td><p><a role="button" type="button" class="btn btn-secondary btn-inline btn-small icon" aria-label="Remove" href="#">Remove
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <g>
+                                <polygon points="19.8,5.6 18.4,4.2 12,10.6 5.6,4.2 4.2,5.6 10.6,12 4.2,18.4 5.6,19.8 12,13.4 18.4,19.8 19.8,18.4 13.4,12 "></polygon>
+                              </g>
+                            </svg>
+                            </a> </p></td>
+                      </tr>
+
+                      <tr>
+                        <td><div class="row">
+                            <div class="col-sm-2 col-xs-6"> <img alt="Abnormal Psychology" class="order-thumbnail" src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/258W/9781429242165.jpg"> </div>
+                            <div class="col-sm-10 col-xs-12">
+                              <div class="product-specs-orders">
+                                <h2 class="h-size5"><a href="#" class="link-inline">Abnormal Psychology</a></h2>
+                                <p>Second&nbsp;Edition<span class="specs-divider"> | </span> ©2014</p>
+                                <p>Robin Rosenberg; Stephen Kosslyn 
+</p>
+                              </div>
+                            </div>
+                          </div></td>
+                        <td>Paperback</td>
+                        <td><p class="isbn" id="isbn01">9780000000000</p></td>
+                        <td><strong>FREE</strong></td>
+                        <td><p><a role="button" type="button" class="btn btn-secondary btn-inline btn-small icon" aria-label="Remove" href="#">Remove
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <g>
+                                <polygon points="19.8,5.6 18.4,4.2 12,10.6 5.6,4.2 4.2,5.6 10.6,12 4.2,18.4 5.6,19.8 12,13.4 18.4,19.8 19.8,18.4 13.4,12 "></polygon>
+                              </g>
+                            </svg>
+                            </a> </p></td>
+                      </tr>
+                      <tr>
+                        <td><div class="row">
+                            <div class="col-sm-2 col-xs-6"> <img alt="Scientific American: Presenting Psychology" class="order-thumbnail" src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/258W/9781319094164.jpg"> </div>
+                            <div class="col-sm-10 col-xs-12">
+                              <div class="product-specs-orders">
+                                <h2 class="h-size5"><a href="#" class="link-inline">Scientific American: Presenting Psychology</a></h2>
+                                <p>Fourth&nbsp;Edition<span class="specs-divider"> | </span> ©2019</p>
+                                <p>Deborah Licht; Misty Hull; Coco Ballantyne
+</p></div>
+                            </div>
+                          </div></td>
+                        <td>Paperback</td>
+                        <td><p class="isbn" id="isbn02">9780000000000</p></td>
+                        <td><strong>FREE</strong></td>
+                        <td><p><a role="button" type="button" class="btn btn-secondary btn-inline btn-small icon" aria-label="Remove" href="#">Remove
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                              <g>
+                                <polygon points="19.8,5.6 18.4,4.2 12,10.6 5.6,4.2 4.2,5.6 10.6,12 4.2,18.4 5.6,19.8 12,13.4 18.4,19.8 19.8,18.4 13.4,12 "></polygon>
+                              </g>
+                            </svg>
+                            </a> </p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" role="button" class="btn btn-primary btn-large">View Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / MODAL - CART  --> 
+
+<!-- / MODAL - CART EMPTY  --> 
+<div class="modal modal-top-nav fade" id="cartmodal" tabindex="-1" role="dialog" aria-labelledby="shoppingcart" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="shoppingcart">In Your Cart (0)</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+      <div class="modal-body">
+              <div class="alert warning alert-top" style="margin-top:0;">
+          <div class="alert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <g>
+                <rect x="11" y="10" width="2" height="4"></rect>
+                <rect x="11" y="15" width="2" height="2"></rect>
+                <path d="M21.71,19.13,13.06,3.85A1.31,1.31,0,0,0,12,3.08a1.31,1.31,0,0,0-1.08.77L2.26,19.13c-.59,1-.11,1.87,1.08,1.87H20.63C21.82,21,22.3,20.15,21.71,19.13ZM4.63,19,12,6l7.35,13Z"></path>
+              </g>
+            </svg>
+          </div>
+          <span><strong>Your cart is empty.</strong></span></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" role="button" class="btn btn-default btn-large">View Cart</button>
+                <button type="button" role="button" class="btn btn-primary btn-large">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / MODAL - CART EMPTY  --> 
+
+<header class="navbar navbar-default navbar-fixed-top" role="banner">
+  <div class="top-bar">
+    <nav>
+      <ul class="top-bar-left">
+        <li><a href="http://macmillanlearning.com/catalog" class="top-bar-active"><span class="square-indicator"></span>Instructors</a></li>
+        <li><a href="https://store.macmillanlearning.com/"><span class="square-indicator"></span>Students</a></li>
+        <li><a href="https://store.macmillanlearning.com/"><span class="square-indicator"></span>Administrators </a></li>
+      </ul>
+    <div class="top-bar-right"><div class="dropdown top-bar-dropdown"><button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">CA<span class="caret"></span><img class="country-flag" alt="Canada" src="images/flags/canada.png"></button><ul class="dropdown-menu dropdown-menu-right"><li><a href="/us/logout?switchsite=us">US<img class="country-flag" alt="United States" src="images/flags/usa.png"></a></li></ul></div></div>
+    </nav>
+  </div>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-left">
+      <li><a href="#" id="trigger" class="menu menu-trigger" aria-label="main navigation" aria-haspopup="true">
+        <div id="nav-icon4" role="navigation"> <span></span> <span></span> <span></span> </div>
+        </a></li>
+    </ul>
+    
+    <!-- Header Branding -->
+    <div class="navbar-header"> <a class="navbar-brand" href="home.html" aria-label="Macmillan Learning"></a>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headernav" aria-expanded="false" role="button"><span class="sr-only">Expand navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+    </div>
+    <!-- Header Navigation -->
+    <div class="collapse navbar-collapse" id="headernav">
+      <ul class="nav navbar-nav navbar-right" role="menu"  aria-labelledby="headernav">
+        <li role="presentation"><a href="#" tabindex="0" role="menuitem">Sign In<span class="specs-divider" aria-hidden="true">//</span>Register</a></li>
+        <li role="presentation"><a href="#" tabindex="0" role="menuitem"><img src="images/header-help-white.svg" alt="Get Help"/></a></li>
+        <li role="presentation"><a tabindex="0" role="menuitem"  data-toggle="modal" data-target="#search" aria-haspopup="true"><img src="images/search-white.svg" alt="Search"/></a></li>
+        <li role="presentation"><a tabindex="0" role="menuitem"  data-toggle="modal" data-target="#cartmodal" aria-haspopup="true"><img class="pull-left" src="images/minicart-white.svg" alt="Shopping Cart"/><span class="badge cart-badge">3</span> </a> </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+  
+</header>
+
+<!-- END HEADER  --> 
+

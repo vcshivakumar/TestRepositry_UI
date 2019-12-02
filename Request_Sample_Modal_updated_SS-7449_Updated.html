@@ -1,0 +1,1751 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Macmillan Learning | Psychology in Everyday Life</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/purchase-options.css" rel="stylesheet">
+    <link href="css/transitions.css" rel="stylesheet">
+    <link href="css/topbar.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+
+    <!-- Typography -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".panel-collapse").on("show.bs.collapse", function () {
+                $('.panel-collapse').collapse('hide'); // Closes all before opening one.
+            });
+
+            $(".panel-collapse").on("shown.bs.collapse", function () {
+                $("a[href='#" + $(this).attr("id") + "']").find(".purchase-radio")[0].checked = true; // Checks radio button on expand.
+            });
+
+            $(".panel-collapse").on("hidden.bs.collapse", function () {
+                $("a[href='#" + $(this).attr("id") + "']").find(".purchase-radio")[0].checked = false; // UnChecks radio button on close.
+            });
+
+            $(".panel-collapse-child").on("show.bs.collapse", function (e) {
+                $('.panel-collapse-child').collapse('hide'); // Closes all before opening one.
+                e.stopPropagation();
+            });
+
+            $(".panel-collapse-child").on("shown.bs.collapse", function (e) {
+                $("a[href='#" + $(this).attr("id") + "']").find(".purchase-cb-addon")[0].checked = true; // Checks radio button on expand.
+                e.stopPropagation();
+            });
+
+            $(".panel-collapse-child").on("hidden.bs.collapse", function (e) {
+                $("a[href='#" + $(this).attr("id") + "']").find(".purchase-cb-addon")[0].checked = false; // UnChecks radio button on close.
+                e.stopPropagation();
+            });
+
+            $(".purchase-cb-addon").on("click", function (e) {
+                $('.panel-collapse-child').collapse('hide'); // Closes all before opening one.                
+            });
+			
+			
+			<!-- MODAL - REQUEST SAMPLES -->
+			$("#E-Bookbutton").click(function () {
+                $(this).text("Added to cart");
+				$('#E-Bookbutton').prepend('<img id="E-BookbuttonImg" src="images/check_updated.svg" style="margin-right: 2px; margin-bottom: 2px;"/>');
+				$("#E-Bookbutton").css("color", "black");
+				$("#E-Bookbutton").css("background", "white");
+				$("#E-Bookbutton").css("box-shadow", "0 0 0px rgba(0,117,142,1)");
+				$("#E-Bookbutton").css("margin", "0px 0px 0px -20px");
+            });
+			
+			$("#Practicebtn").click(function () {
+                $(this).text("Added to cart");
+				$('#Practicebtn').prepend('<img id="PracticebtnImg" src="images/check_updated.svg" style="margin-right: 2px; margin-bottom: 2px;"/>');
+				$("#Practicebtn").css("color", "black");
+				$("#Practicebtn").css("background", "white");
+				$("#Practicebtn").css("box-shadow", "0 0 0px rgba(0,117,142,1)");
+				$("#Practicebtn").css("margin", "0px 0px 0px -20px");
+            });
+			
+			$("#launchpadbtn").click(function () {
+                $(this).text("Added to cart");
+				$("#launchpadbtn").prepend('<img id="launchpadbtnImg" src="images/check_updated.svg" style="margin-right: 2px; margin-bottom: 2px;"/>');
+				$("#launchpadbtn").css("color", "black");
+				$("#launchpadbtn").css("background", "white");
+				$("#launchpadbtn").css("box-shadow", "0 0 0px rgba(0,117,142,1)");
+				$("#launchpadbtn").css("margin", "0px 0px 0px -20px");
+            });
+			
+			$("#Loose-Leafbtn").click(function () {
+                $(this).text("Added to cart");
+				$("#Loose-Leafbtn").prepend('<img id="launchpadbtnImg" src="images/check_updated.svg" style="margin-right: 2px; margin-bottom: 2px;"/>');
+				$("#Loose-Leafbtn").css("color", "black");
+				$("#Loose-Leafbtn").css("background", "white");
+				$("#Loose-Leafbtn").css("box-shadow", "0 0 0px rgba(0,117,142,1)");
+				$("#Loose-Leafbtn").css("margin", "0px 0px 0px -20px");
+            });
+			
+			$("#Paperbackbtn").click(function () {
+                $(this).text("Added to cart");
+				$("#Paperbackbtn").prepend('<img id="launchpadbtnImg" src="images/check_updated.svg" style="margin-right: 2px; margin-bottom: 2px;"/>');
+				$("#Paperbackbtn").css("color", "black");
+				$("#Paperbackbtn").css("background", "white");
+				$("#Paperbackbtn").css("box-shadow", "0 0 0px rgba(0,117,142,1)");
+				$("#Paperbackbtn").css("margin", "0px 0px 0px -20px");
+            });
+			
+			$('#clsbtn').on('click', function(e) { 
+            $('#errdiv').remove(); 
+    });
+			<!-- MODAL - REQUEST SAMPLES -->
+        });
+		
+		
+    </script>
+	<script>
+
+
+</script>
+	<script>
+	var myCustomScrollbar = document.querySelector('.my-custom-scrollbar');
+    Ps.initialize(myCustomScrollbar);
+    var scrollbarY = myCustomScrollbar.querySelector('.ps.ps--active-y>.ps__scrollbar-y-rail');
+    myCustomScrollbar.onscroll = function() {
+  	scrollbarY.style.cssText = `top: ${this.scrollTop}px!important; height: 400px; right: ${-this.scrollLeft}px`;  
+	</script>
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+    </head>
+    <body>
+
+<!-- MODAL - LOOK INSIDE SAMPLE CHAPTERS -->
+<div class="modal modal-md fade" id="lookinside" tabindex="-1" role="dialog" aria-labelledby="lookinside" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="lookinsidesamples">Look Inside: Sample Chapters</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <div class="row">
+              <div class="col-md-12">
+            <div class="list-group padding">
+                  <p class="text-uppercase">Select a file to view:</p>
+                  <div class="list-group">
+                <p><a href="#" class="btn btn-secondary btn-inline">Chapter One: Chapter Name </a></p>
+                <p> <a href="#" class="btn btn-secondary btn-inline">Chapter Two: Chapter Name </a> </p>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - LOOK INSIDE SAMPLE CHAPTERS --> 
+
+<!-- MODAL - INSTRUCTOR SAMPLES -->
+<div class="modal modal-md fade" id="availablesamples" tabindex="-1" role="dialog" aria-labelledby="availablesamples1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="availablesamples1">Request Instructor Samples</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <div class="row">
+              <div class="col-md-12">
+            <div class="list-group padding">
+                  <form>
+                <fieldset>
+                      <legend style="font-weight:500;">Select Formats:</legend>
+                      <div role="checkbox" aria-checked="false" class="checkbox" tabindex="0">
+                    <input name="print-sample" id="print-sample" value="print-sample" type="checkbox">
+                    Hardcover</div>
+                      <hr/>
+                      <div role="checkbox" aria-checked="false" class="checkbox" tabindex="0">
+                    <input name="ebook-sample" id="ebook-sample" value="ebook-sample" type="checkbox">
+                    e-Book</div>
+                      <hr/>
+                      <div role="checkbox" aria-checked="false" class="checkbox" tabindex="0">
+                    <input name="launchpad-sample" id="launchpad-sample" value="launchpad-sample" type="checkbox">
+                    LaunchPad</div>
+                      <hr/>
+                      <div role="checkbox" aria-checked="false" class="checkbox" tabindex="0">
+                    <input name="achieve-sample" id="achieve-sample" value="achieve-sample" type="checkbox">
+                    Achieve Read & Practice</div>
+                    </fieldset>
+              </form>
+                </div>
+          </div>
+            </div>
+      </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Add to Cart</button>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - INSTRUCTOR SAMPLES --> 
+
+<!-- MODAL - REQUEST SAMPLES --> 
+<div class="modal modal-md fade" id="Requestsamples" tabindex="-1" role="dialog" aria-labelledby="availablesamples1" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="availablesamples1">Request Instructor Samples</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body my-custom-scrollbar my-custom-scrollbar-primary contentright" id="style-5">
+        <div class="row">
+              <div class="col-md-12 contentleft">
+            <div class="">
+                  <form>
+                <fieldset>
+				<div id="errdiv" style="border: 1px solid goldenrod; background: palegoldenrod;">
+				<button type="button" id="clsbtn" class="close closebtnalgn" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+        <p class="errormsg">Oops! We couldn't add your product to the cart. Please try again.
+		</p>
+    </div><p class="sampleinstructor">These samples are for instructors only.</p>
+					  <hr class="requestsamplehr"/>
+					  
+				   <div class="row rowsample">
+      <div class="col-md-7 col-lg-8 col-xs-7 col-sm-7 rowdivsample"> 
+	  <p class="Requestsampleparagraph">E-Book <br></p><span class="Requestsamplespan">Sample meta goes here</span></div>
+      <!-- <a class="btn btn-white btn-small col-md-2 col-lg-2 col-xs-2 col-sm-2  freebtncss freebtnalgm rowfreesample">FREE</a> -->
+	  
+	 <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 freemobileadj"> <span class="badge badge-pill badge-info rowdivfree">FREE</span></div>
+	  <div class="col-md-3 col-lg-2 col-xs-3 col-sm-3 ml-auto rowfreesample"> 
+	  <button type="button" id="E-Bookbutton" class="btn btn-primary rowaddtocartsample" value="Add to Cart" >Add to Cart</button> </div>
+    </div>
+	
+                      <hr class="requestsamplehr"/>
+                  	<div class="row rowsample" >
+      <div class="col-md-7 col-lg-8 col-xs-7 col-sm-7 rowdivsample"> <p class="Requestsampleparagraph">Read & Practice<br></p><span class="Requestsamplespan">Sample meta goes here</span></div>
+      <!-- <a class="btn btn-white btn-small col-md-2 col-lg-2 col-xs-2 col-sm-2 freebtncss freebtnalgm rowfreesample">FREE</a> -->
+	  <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 freemobileadj"> <span class="badge badge-pill badge-info rowdivfree">FREE</span></div>
+	  <div class="col-md-3 col-lg-2 col-xs-3 col-sm-3 ml-auto rowfreesample" > 
+	  <button type="button" id="Practicebtn" class="btn btn-primary rowaddtocartsample" value="Add to Cart" >Add to Cart</button> </div>
+    </div>
+    </div>
+	
+                      <hr class="requestsamplehr"/>
+                     <div class="row rowsample" >
+      <div class="col-md-7 col-lg-8 col-xs-7 col-sm-7 rowdivsample" > <p class="Requestsampleparagraph">Launchpad <br></p><span class="Requestsamplespan">Sample meta goes here</span></div>
+       <!-- <a class="btn btn-white btn-small col-md-2 col-lg-2 col-xs-2 col-sm-2 freebtncss freebtnalgm rowfreesample" >FREE</a> -->
+	   <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 freemobileadj"> <span class="badge badge-pill badge-info rowdivfree">FREE</span></div>
+	   <div class="col-md-3 col-lg-2 col-xs-3 col-sm-3 ml-auto rowfreesample" > 
+	  <button type="button" id="launchpadbtn" class="btn btn-primary rowaddtocartsample" value="Add to Cart" >Add to Cart</button> </div>
+    </div>
+                      <hr class="requestsamplehr"/>
+                     <div class="row rowsample">
+      <div class="col-md-7 col-lg-8 col-xs-7 col-sm-7 rowdivsample" > <p class="Requestsampleparagraph">Loose-Leaf <br></p><span class="Requestsamplespan">Sample meta goes here</span></div>
+      <!-- <a class="btn btn-white btn-small col-md-2 col-lg-2 col-xs-2 col-sm-2 freebtncss freebtnalgm rowfreesample" >FREE</a> -->
+	   <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 freemobileadj"> <span class="badge badge-pill badge-info rowdivfree">FREE</span></div>
+	  <div class="col-md-3 col-lg-2 col-xs-3 col-sm-3 ml-auto rowfreesample" > 
+	  <button type="button" id="Loose-Leafbtn" class="btn btn-primary rowaddtocartsample" value="Add to Cart" >Add to Cart</button> </div>
+    </div>
+					 <hr class="requestsamplehr"/>
+					<div class="row rowsample">
+      <div class="col-md-7 col-lg-8 col-xs-7 col-sm-7 rowdivsample" > <p class="Requestsampleparagraph">Paperback <br></p><span class="Requestsamplespan">Sample meta goes here</span></div>
+	  <!-- <a class="btn btn-white btn-small col-md-2 col-lg-2 col-xs-2 col-sm-2 freebtncss freebtnalgm rowfreesample" >FREE</a> -->
+	   <div class="col-md-2 col-lg-2 col-xs-2 col-sm-2 freemobileadj"> <span class="badge badge-pill badge-info rowdivfree">FREE</span></div>
+      <div class="col-md-3 col-lg-2 col-xs-3 col-sm-3 ml-auto rowfreesample" >
+       <button type="button" id="Paperbackbtn" class="btn btn-primary rowaddtocartsample" >Add to Cart</button> 
+    </div>
+	 </fieldset>
+              </form>
+                </div>
+          </div>
+            </div>
+      </div>
+	  
+          <div class="modal-footer" style="padding: 8px !important;">
+		 <div class="row">
+		  <div class="col-md-12 col-lg-8 col-xs-12 col-sm-12 lookingtestlink" >
+		  <a class="link-inline lftboor" >Looking for Test Banks or other resources?</a></div>
+		  <div class="col-md-12 col-lg-4 col-xs-12 col-sm-12 viewcartbtnalignment">
+		   <button type="button" class="btn btn-outline-success rowviewcartsample">View Cart</button></div> </div>
+	
+		  
+      </div>
+        </div>
+  </div>
+    </div>
+	<div class="loader"></div>
+<!-- / MODAL - REQUEST SAMPLES --> 
+
+<!-- MODAL - VIEW DEMO -->
+<div class="modal modal-md fade" id="viewdemo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="samplemodallabel">Available Demos</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <p class="text-uppercase">Select a demo to view:</p>
+        <div class="list-group"> <a href="#" class="btn btn-secondary btn-inline">View Achieve Demo One</a> <a href="#" class="btn btn-secondary btn-inline">View Achieve Demo Two</a> <a href="#" class="btn btn-secondary btn-inline">View LaunchPad Demo One</a> <a href="#" class="btn btn-secondary btn-inline">View LaunchPad Demo Two</a> </div>
+      </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - VIEW DEMO --> 
+
+<!-- MODAL - CONFIRM DOWNLOAD  -->
+<div class="modal modal-lg fade" id="confirmdownload" tabindex="-1" role="dialog" aria-labelledby="confirm download" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="confirm-download-title">Confirm Request</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <div class="row">
+              <div class="col-sm-7">
+            <p style="text-transform:uppercase;">You've selected:</p>
+            <div class="well-address small well-lg ir-selections">
+                  <p>Chapter Figures & Photos</p>
+                  <div class="row">
+                <div class="col-sm-4">
+                      <ul class="list-unstyled">
+                    <li>Chapter 1</li>
+                    <li>Chapter 2</li>
+                    <li>Chapter 3</li>
+                    <li>Chapter 4</li>
+                    <li>Chapter 5</li>
+                  </ul>
+                    </div>
+                <div class="col-sm-4">
+                      <ul class="list-unstyled">
+                    <li>Chapter 1</li>
+                    <li>Chapter 2</li>
+                    <li>Chapter 3</li>
+                    <li>Chapter 4</li>
+                    <li>Chapter 5</li>
+                  </ul>
+                    </div>
+                <div class="col-sm-4">
+                      <ul class="list-unstyled">
+                    <li>Chapter 1</li>
+                    <li>Chapter 2</li>
+                    <li>Chapter 3</li>
+                    <li>Chapter 4</li>
+                    <li>Chapter 5</li>
+                  </ul>
+                    </div>
+              </div>
+                  <p>Clicker Questions</p>
+                  <p>Faculty Guides</p>
+                  <p>Image Slides</p>
+                  <p>Instructor Resource Manual - PDF</p>
+                  <p>Instructor Resource Manual - Word</p>
+                  <p>Lecture Slides</p>
+                  <p>Test Bank (Online Only)</p>
+                </div>
+          </div>
+              <div class="col-sm-5 well-lg">
+            <p>Click the E-mail Download Link button and we'll send you an e-mail at [email address] with links to download your instructor resources. Please note there may be a delay in delivering your e-mail depending on the size of the files.</p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loadingdownload" data-dismiss="modal">E-mail Download Link</button>
+          </div>
+            </div>
+        <div class="well well-sm well-light-gray" style="line-height:1.4;font-size:0.85em">
+              <p class="small"> <strong>Warning!</strong> These materials are owned by Macmillan Learning or its licensors and are protected by copyright laws in the United States and other jurisdictions. Such materials may include a digital watermark that is linked to your name and email address in your Macmillan Learning account to identify the source of any materials used in an unauthorised way and prevent online piracy.  These materials are being provided solely for instructional use by instructors who have adopted Macmillan Learning’s accompanying textbooks or online products for use by students  in their courses. These materials may not be copied, distributed, sold, shared, posted online, or used, in print or electronic format, except in the limited circumstances set forth in the Macmillan Learning <a class="link-inline" href="terms-of-use.html">Terms of Use </a> and any other reproduction or distribution is illegal. These materials may not be made publicly available under any circumstances.  All other rights reserved. For more information about the use of your personal data including for the purposes of anti-piracy enforcement, please refer to Macmillan Learning's <a class="link-inline" href="privacy-notice.html">Privacy Notice</a>.</p>
+            </div>
+      </div>
+          <div class="modal-footer">
+        <div class="row">
+              <div class="col-sm-4 col-sm-offset-8">
+            <button type="button" class="btn btn-default"  data-toggle="modal" data-dismiss="modal">Cancel</button>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - CONFIRM DOWNLOAD  --> 
+
+<!-- MODAL - LOADING DOWNLOAD  -->
+<div class="modal modal-md fade" id="loadingdownload" tabindex="-1" role="dialog" aria-labelledby="loading download" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="loading-download-title">Request Status</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <div class="loading-circle">
+              <div class="circle1 circle"></div>
+              <div class="circle2 circle"></div>
+              <div class="circle3 circle"></div>
+              <div class="circle4 circle"></div>
+              <div class="circle5 circle"></div>
+              <div class="circle6 circle"></div>
+              <div class="circle7 circle"></div>
+              <div class="circle8 circle"></div>
+              <div class="circle9 circle"></div>
+              <div class="circle10 circle"></div>
+              <div class="circle11 circle"></div>
+              <div class="circle12 circle"></div>
+            </div>
+        <div class="padding"></div>
+      </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+      </div>
+        </div>
+  </div>
+    </div>
+<!--/ MODAL - LOADING DOWNLOAD  --> 
+
+<!-- MODAL - THANK YOU DOWNLOAD  -->
+<div class="modal modal-md fade" id="thankyoudownload" tabindex="-1" role="dialog" aria-labelledby="thank you download" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="thankyou-download-title">Request Status</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+                    <div class="well-lg">
+        <h3>Thank you!</h3>
+            <p>Your download request has been received and your download link will be sent to <strong>instructor@school.edu</strong>.</p>
+
+<p>Please note you could wait up to <strong>30 to 60 minutes</strong> to receive your download e-mail depending on the number and size of the files. We appreciate your patience while we process your request.</p> 
+
+<p>Check your inbox, trash, and spam folders for an e-mail from <strong>InstructorResources@macmillan.com</strong>.</p>
+
+<p>If you do not receive your e-mail, please visit <a href="https://macmillan.force.com/macmillanlearning/s/" class="link-inline">macmillanlearning.com/support</a>.</p> </div>
+        <div class="padding"></div>
+      </div>
+          <div class="modal-footer">
+        <div class="row">
+              <div class="col-sm-9 text-left"></div>
+              <div class="col-sm-3">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - THANK YOU DOWNLOAD  --> 
+
+<!-- MODAL - ERROR DOWNLOAD  -->
+<div class="modal modal-md fade" id="errordownload" tabindex="-1" role="dialog" aria-labelledby="error download" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="error-download-title">Request Status</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <div class="alert error" role="alert" >
+              <div class="alert-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2ZM4,12A8,8,0,0,1,16.82,5.66l-11.37,11A8,8,0,0,1,4,12Zm8,8A8,8,0,0,1,6.79,18.1l11.45-11A8,8,0,0,1,12,20Z"></path>
+                </svg>
+          </div>
+              <span><strong>We're sorry!</strong> The server encountered an internal error and cannot complete your request. Please try again later.</span></div>
+        <div class="padding"></div>
+      </div>
+          <div class="modal-footer">
+        <div class="row">
+              <div class="col-sm-9 text-left"> </div>
+              <div class="col-sm-3">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - ERROR DOWNLOAD  --> 
+
+<!-- MODAL - GET VERIFIED DOWNLOAD  -->
+<div class="modal modal-md fade" id="getverified" tabindex="-1" role="dialog" aria-labelledby="get verified" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="getverified-title"></div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <h3>Wait! Don't forget!</h3>
+        <p>Become a verified instructor to request free exam copies, download resources, and access our digital courses. <a href="#" class="link-inline"> [link back to verification page?]</a></p>
+        <div class="padding"></div>
+      </div>
+          <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - GET VERIFIED DOWNLOAD  --> 
+
+<!-- MODAL - SELECT ONE FILE  -->
+<div class="modal modal-md fade" id="selectonefile" tabindex="-1" role="dialog" aria-labelledby="please sign one file" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog" role="document">
+    <div class="modal-content">
+          <div class="modal-header">
+        <div class="modal-title" id="selectonefile-to-download">Please Select a File</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon points="19.82 5.59 18.41 4.18 12 10.59 5.59 4.18 4.18 5.59 10.59 12 4.18 18.41 5.59 19.82 12 13.41 18.41 19.82 19.82 18.41 13.41 12 19.82 5.59"></polygon>
+        </svg>
+        </span></button>
+      </div>
+          <div class="modal-body">
+        <h3 class="h-size4">You need to select at least one file.</h3>
+        <div class="padding"></div>
+      </div>
+          <div class="modal-footer">
+        <div class="row">
+              <div class="col-sm-3 col-sm-offset-9">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </div>
+<!-- / MODAL - SELECT ONE FILE  -->
+
+<div w3-include-html="shared-header.html"></div>
+
+<!-- PRODUCT -->
+<div class="container-menu">
+      <div class="mp-pusher" id="mp-pusher"> 
+    <!-- MAIN OFFCANVAS MENU -->
+    <div id="mp-menu" class="mp-menu mp-cover" role="navigation" aria-label="main navigation" aria-expanded="false">
+          <div data-level="1" class="mp-level mp-overlap">
+        <ul>
+              <li> <a href="#" aria-haspopup="true" aria-hidden="true" aria-label="our story menu">Our Story</a>
+            <div style="" data-level="2" class="mp-level">
+                  <h2>Our Story</h2>
+                  <a class="mp-back" href="#">back</a>
+                  <ul>
+                <li> <a href="#">Our Story</a></li>
+                <li> <a href="#">Our Leadership</a></li>
+                <li> <a href="#">Our Imprints</a></li>
+                <li> <a href="#">Our Authors</a></li>
+                <li> <a href="#">High School</a></li>
+                <li> <a href="#">Macmillan News</a></li>
+                <li> <a href="#">Sustainability</a></li>
+              </ul>
+                </div>
+          </li>
+              <li> <a href="#" aria-haspopup="true" aria-hidden="true" aria-label="disciplines menu">Disciplines</a>
+            <div style="" data-level="2" class="mp-level">
+                  <h2>Disciplines</h2>
+                  <a class="mp-back" href="#">back</a>
+                  <ul aria-label="discipline menu level 2">
+                <li> <a href="#">Astronomy</a> </li>
+                <li> <a href="#">Biochemistry</a> </li>
+                <li> <a href="#">Biology</a> </li>
+                <li> <a href="#">Chemistry</a> </li>
+                <li> <a href="#">College Success</a> </li>
+                <li> <a href="#">Communications</a> </li>
+                <li> <a href="#">Economics</a> </li>
+                <li> <a href="#">Electrical Engineering</a> </li>
+                <li> <a href="#">English</a> </li>
+                <li> <a href="#">Environmental Science</a> </li>
+                <li> <a href="#">Geography</a> </li>
+                <li> <a href="#">Geology</a> </li>
+                <li> <a href="#">History</a> </li>
+                <li> <a href="#">Mathematics</a> </li>
+                <li> <a href="#">Music & Theater</a> </li>
+                <li> <a href="#">Nutrition</a> </li>
+                <li> <a href="#">Philosophy & Religion</a> </li>
+                <li> <a href="#">Physics</a> </li>
+                <li> <a href="#">Psychology</a> </li>
+                <li> <a href="#">Sociology</a> </li>
+                <li> <a href="#">Statistics</a> </li>
+              </ul>
+                </div>
+          </li>
+              <li> <a href="#" aria-haspopup="true" aria-hidden="true" aria-label="digital menu">Digital</a>
+            <div style="" data-level="2" class="mp-level">
+                  <h2>Digital</h2>
+                  <a class="mp-back" href="#">back</a>
+                  <ul aria-label="digital menu level 2">
+                <li> <a href="#">e-Books</a> </li>
+                <li> <a href="#">FlipIt</a> </li>
+                <li> <a href="#">LaunchPad</a> </li>
+                <li> <a href="#">LearningCurve</a> </li>
+                <li> <a href="#">WriterKey</a> </li>
+                <li> <a href="#">Writer's Help</a> </li>
+                <li> <a href="#">Sapling Learning</a> </li>
+              </ul>
+                </div>
+          </li>
+              <li> <a href="#" aria-haspopup="true" aria-hidden="true" aria-label="solutions menu">Solutions</a>
+            <div style="" data-level="2" class="mp-level">
+                  <h2>Solutions</h2>
+                  <a class="mp-back" href="#">back</a>
+                  <ul aria-label="solutions menu level 2">
+                <li> <a href="#">Curriculum Solutions</a> </li>
+                <li> <a href="#">Lab Solutions</a> </li>
+                <li> <a href="#">Learning Management System</a> </li>
+                <li> <a href="#">Trade Up</a> </li>
+              </ul>
+                </div>
+          </li>
+              <li> <a href="#" aria-haspopup="true" aria-hidden="true" aria-label="get help menu">Get Help</a>
+            <div style="" data-level="2" class="mp-level">
+                  <h2>Get Help</h2>
+                  <a class="mp-back" href="#">back</a>
+                  <ul aria-label="get help menu level 2">
+                <li> <a href="#">Help Center</a> </li>
+                <li> <a href="#">My Account</a> </li>
+                <li> <a href="#">Orders & Returns</a> </li>
+                <li> <a href="#">Disability Services</a> </li>
+                <li> <a href="#">Find Your Rep</a> </li>
+                <li> <a href="#">Report Piracy</a> </li>
+                <li> <a href="#">Premissions</a> </li>
+                <li> <a href="#">First Day of Class</a> </li>
+                <li> <a href="#">Contact Us</a> </li>
+              </ul>
+                </div>
+          </li>
+            </ul>
+      </div>
+        </div>
+    <!-- /Main Menu -->
+    <ul class="breadcrumb visible-sm visible-md visible-lg">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Discipline</a></li>
+          <li><a href="#">Course</a></li>
+        </ul>
+    <main role="main" id="instructor">
+          <div class="scroller">
+        <div class="scroller-inner">
+              <div class="content clearfix">
+            <div class="m-scene" id="main">
+                  <div class="m-header scene_element scene_element--fadeinleft">
+                <div id="product-wrapper"> 
+                      <!-- title info--> 
+                      <!-- TAB MENU -->
+                      <div id="product-tabs">
+                    <div role="tabpanel">
+                          <ul id="tabmobile" class="nav nav-tabs nav-justified" role="tablist">
+                        <li role="presentation" class="active"><a href="#about" tabindex="0" data-toggle="tab" aria-controls="about" aria-selected="true" alt="about" class="purchase-contenttype-link" aria-label="about" aria-current="about" role="tab">About<span class="expand-plus visible-xs"></span></a></li>
+                        <li role="presentation"><a href="#preview" data-toggle="tab" tabindex="0" aria-selected="false" alt="preview" class="purchase-contenttype-link" aria-label="preview" role="tab">Preview<span class="expand-plus visible-xs"></span></a></li>
+                        <li role="presentation"><a href="#digital" data-toggle="tab" tabindex="0" aria-selected="false" alt="digital" class="purchase-contenttype-link" aria-label="digital" role="tab">Digital<span class="expand-plus visible-xs"></span></a></li>
+                        <li role="presentation"><a href="#contents" data-toggle="tab" tabindex="0" aria-selected="false" alt="contents" class="purchase-contenttype-link" aria-label="contents" role="tab">Contents<span class="expand-plus visible-xs"></span></a></li>
+                        <li role="presentation"><a href="#authors" data-toggle="tab" tabindex="0" aria-selected="false" alt="authors" class="purchase-contenttype-link" aria-label="authors" role="tab">Authors<span class="expand-plus visible-xs"></span></a></li>
+                        <li role="presentation"><a href="#resources" data-toggle="tab" tabindex="0" aria-selected="false" alt="resources" class="purchase-contenttype-link" aria-label="resources" role="tab">Resources<span class="expand-plus visible-xs"></span></a></li>
+                        <li role="presentation"><a href="#videos" data-toggle="tab" tabindex="0" aria-selected="false" alt="videos" class="purchase-contenttype-link" aria-label="videos" role="tab">Videos<span class="expand-plus visible-xs"></span></a></li>
+                        <li role="presentation"><a href="#related" data-toggle="tab" tabindex="0" alt="related titles" aria-selected="false" class="purchase-contenttype-link" aria-label="related titles" role="tab">Related Titles<span class="expand-plus visible-xs"></span></a></li>
+                      </ul>
+                          <div id="product-specs">
+                        <div id="tabContent1" class="tab-content"> 
+                              <!-- ABOUT -->
+                              <div role="tabpanel" class="tab-pane fade in active" aria-label="about" id="about" aria-hidden="false">
+                            <section class="product-content">
+                                  <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-5 col-xs-12">
+                                      <div class="row">
+                                    <div class="col-lg-10 col-md-11 col-sm-10 col-xs-12"> <a data-toggle="modal" data-target="#lookinside" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title">
+                                          <div class="padding"></div>
+                                          <div class="btn-justified">  <a data-toggle="modal" data-target="#viewdemo" class="btn btn-solid-light btn-product-side btn-block">View Demo</a> <a href="#" class="btn btn-solid-light btn-product-side btn-block">Tailor This Text</a> <a href="#" class="btn btn-product-side btn-solid-light btn-block">Find Your Rep</a>
+										  <!--Requestsamples Button -->
+										  <a data-toggle="modal" data-target="#Requestsamples" class="btn btn-product-side btn-solid-light btn-block"  >Request Samples</a>
+										  <div id = "loadingProgressG"><img id = "myImage" src = "images/Spin-1s-60px.svg"></div>
+										  <!--Requestsamples Button Ends -->
+										  </div>
+                                          <div class="padding"></div>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-5 col-md-4 col-sm-7 col-xs-12">
+                                      <div id="specs">
+                                    <div class="label label-pdp">Coming Soon&nbsp;&nbsp;00/00/0000</div>
+                                    <hgroup class="padding">
+                                          <h1 class="h-size3 clear-float">Psychology in Everyday Life</h1>
+                                          <h2 class="subhead h-size4">Subtitle <span class="edition">Fourth&nbsp;&nbsp;Edition<span class="specs-divider" aria-hidden="true">|</span> ©2017</span> <span class="small text-muted author">David G. Myers; C. Nathan DeWall</span></h2>
+                                        </hgroup>
+                                    <h3 class="h-size5">Tagline here.</h3>
+                                    <div class="product-description">David Myers' and Nathan DeWall’s best-selling and briefest introduction to psychology speaks to all students regardless of their background or level of preparedness, with no assumptions made in the vocabulary, examples, or presentation. Students of all kinds are comfortable with Myers' manageable chapters, which include careful connections to associated <span id="dots">...</span> <span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet.
+                                      <p>Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</p>
+                                      </span></div>
+                                    <a class="link-inline" onclick="myFunction()" id="see-all">Read more</a>
+                                    <div class="padding"></div>
+                                    <div id="product-callout">
+                                          <h4>Assess Your Strengths</h4>
+                                          <p>Try an activity, How Satisfied Are You With Your Life, and How Could You Be More Satisfied?</p>
+                                          <p><a href="#" class="btn-link">Try it today</a></p>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-4 col-md-5 col-md-offset-0 col-sm-offset-5 col-sm-7 col-xs-12">
+                                      <div role="tabpanel" class="price-box-padding" id="Purchase Options">
+                                    <div class="purchase-border">
+                                          <div class="panel-group">
+                                        <div class="panel panel-default panel-price">
+                                              <div class="panel-heading" style="padding:0;margin:0;"><a href="#" class="btn btn-primary btn-block" style="background:linear-gradient(60deg, #00758e, #205460);">Students - Buy or Rent</a></div>
+                                            </div>
+                                      </div>
+                                          <hr class="hr-small"/>
+                                          <!--PURCHASE OPTIONS -->
+                                          <ul role="tablist" aria-label="Purchase Options" class="nav nav-tabs nav-price" style="text-align: center;">
+                                        <li id="formats-tab" aria-controls="format" role="presentation" class="active col-md-4 col-sm-4" style="padding: 0;"><a class="first purchase-type-link" tabindex="0" href="#format" data-toggle="tab" alt="formats" aria-label="formats" aria-selected="true" aria-current="formats" role="tab">Formats</a></li>
+                                        <li id="packages-tab" aria-controls="packages" role="presentation" class="col-md-4 col-sm-4" style="padding: 0;"><a class="purchase-type-link" tabindex="0" href="#packages" data-toggle="tab" alt="packages" aria-label="packages" aria-selected="false" role="tab" style="">Packages</a></li>
+                                        <li id="resources-tab" class="col-md-4 col-sm-4" aria-controls="resource" role="presentation" style="padding: 0;text-align: center;"><a class="last purchase-type-link" tabindex="0" href="#resource" data-toggle="tab" alt="Study Extras" aria-label="Study Extras" aria-selected="false" role="tab">Study Extras</a></li>
+                                      </ul>
+                                          <div id="purchasetypes" class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade active in" id="format" aria-label="format-tab" aria-hidden="false">
+                                              <div class="panel-group">
+                                            <div class="panel panel-default panel-price"> <a class="accordion-toggle collapsed" data-toggle="collapse" href="#ebook" aria-expanded="false" aria-controls="ebook-purchase-options" id="accordion-control-1">
+                                              <div class="panel-heading">
+                                                <div class="outofstock-cnt">
+                                                  <div class="addons-txt">
+                                                    <div class="parent-label">eBook <span class="expand-plus-caret-down"></span> <span class="product-price"><span class="product-price-from">from</span> $00.00</span></div>
+                                                    <p class="small isbn">ISBN:9780000000000</p>
+                                                    <input name="isbnCode" class="isbnCode" value="9780000000000" type="hidden">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              </a> 
+                                                  
+                                                  <!-- /Change radio to toggle -->
+                                                  
+                                                  <div class="panel-collapse collapse" id="ebook" aria-expanded="false">
+                                                <div class="panel-body"> 
+                                                      <!-- Detailed Description -->
+                                                      <p class="description">Bookmark, search, and highlight our PDF-style eBooks.</p>
+                                                      <!-- EBook Options-->
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Rent</span> (3 months)</label>
+                                                              <p class="small isbn">ISBN:9780000000000</p>
+                                                              <input name="isbnCode" class="isbnCode" value="9780000000000" type="hidden">
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from item-break">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Rent</span> (4 months)</label>
+                                                              <p class="small isbn">ISBN:9780000000000</p>
+                                                              <input name="isbnCode" class="isbnCode" value="9780000000000" type="hidden">
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Rent</span> (6 months)</label>
+                                                              <p class="small isbn">ISBN:9780000000000</p>
+                                                              <input name="isbnCode" class="isbnCode" value="9780000000000" type="hidden">
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Buy</span> </label>
+                                                              <p class="small isbn">ISBN:9780000000000</p>
+                                                              <input name="isbnCode" class="isbnCode" value="9780000000000" type="hidden">
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                  </div>
+                                                      <div class="padding"></div>
+                                                      <p><a class="btn btn-solid-light btn-large btn-justified" href="#" aria-label="Request instructor ebook sample">Instructors - Request Sample</a></p>
+                                                    </div>
+                                              </div>
+                                                </div>
+                                          </div>
+                                              <div class="panel-group">
+                                            <div class="panel panel-default panel-price"> <a class="accordion-toggle collapsed" data-toggle="collapse" href="#productname" aria-expanded="false"  aria-controls="achieve-purchase-options" id="accordion-control-2">
+                                              <div class="panel-heading">
+                                                <div class="outofstock-cnt">
+                                                  <div class="addons-txt">
+                                                    <div class="parent-label">Achieve Read & Practice <span class="expand-plus-caret-down"></span> <span class="product-price"><span class="product-price-from">from</span> $00.00</span></div>
+                                                    <input name="isbnCode" class="isbnCode" value="9781319066840" type="hidden">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              </a> 
+                                                  
+                                                  <!-- /Change radio to toggle -->
+                                                  
+                                                  <div class="panel-collapse collapse" id="productname" aria-expanded="false">
+                                                <div class="panel-body"> 
+                                                      <!-- Detailed Description -->
+                                                      <p class="description">Learning Made Simple.</p>
+                                                      <!-- Access Options-->
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Subscribe</span> (1-year)</label>
+                                                              <p class="small isbn">ISBN:9780000000000</p>
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Subscribe</span> (2-years)</label>
+                                                              <p class="small isbn">ISBN:9780000000000</p>
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                  </div>
+                                                      <div class="padding"></div>
+                                                      <p><a class="btn btn-solid-light btn-large btn-justified" href="#" aria-label="Pequest instructor access to Achieve Read and Practice">Instructors - Request Sample</a> <a class="btn btn-secondary btn-small btn-justified" href="#" aria-label="Request instructor loose-leaf sample">Go to Achieve</a></p>
+                                                    </div>
+                                              </div>
+                                                </div>
+                                          </div>
+                                              <div class="panel-group">
+                                            <div class="panel panel-default panel-price"> <a class="accordion-toggle collapsed" data-toggle="collapse" href="#looseleaf" aria-expanded="false"  aria-controls="looseleaf-purchase-options" id="accordion-control-3">
+                                              <div class="panel-heading">
+                                                <div class="outofstock-cnt">
+                                                  <div class="addons-txt">
+                                                    <div class="parent-label">Loose-Leaf <span class="expand-plus-caret-down"></span> <span class="product-price"><span class="product-price-from">from</span> $90.00</span></div>
+                                                    <p class="small isbn">ISBN:9780000000000</p>
+                                                    <input name="isbnCode" class="isbnCode" value="9780000000000" type="hidden">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              </a> 
+                                                  
+                                                  <!-- /Change radio to toggle -->
+                                                  
+                                                  <div class="panel-collapse collapse" id="looseleaf" aria-expanded="false">
+                                                <div class="panel-body"> 
+                                                      <!-- Detailed Description -->
+                                                      <p class="description">Save money with our loose, 3-hole punched pages.</p>
+                                                      <!-- Loose-Leaf Options-->
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Buy</span></label>
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <p><a class="btn btn-solid-light btn-large btn-justified" href="#" aria-label="Request instructor loose-leaf sample">Instructors - Request Sample</a> </p>
+                                                    </div>
+                                              </div>
+                                                </div>
+                                          </div>
+                                              <div class="panel-group">
+                                            <div class="panel panel-default panel-price"> <a class="accordion-toggle collapsed" data-toggle="collapse" href="#hardcover" aria-expanded="false"  aria-controls="hardcover-purchase-options" id="accordion-control-4">
+                                              <div class="panel-heading">
+                                                <div class="outofstock-cnt">
+                                                  <div class="addons-txt">
+                                                    <div class="parent-label">Hardcover <span class="expand-plus-caret-down"></span> <span class="product-price"><span class="product-price-from">from</span> $000.00</span></div>
+                                                    <p class="small isbn">ISBN:9780000000000</p>
+                                                    <input name="isbnCode" class="isbnCode" value="9780000000000" type="hidden">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              </a> 
+                                                  
+                                                  <!-- /Change radio to toggle -->
+                                                  
+                                                  <div class="panel-collapse collapse" id="hardcover" aria-expanded="false">
+                                                <div class="panel-body"> 
+                                                      <!-- Detailed Description -->
+                                                      <p class="description">Read and study old-school with our bound texts.</p>
+                                                      <!-- Hardcover Options-->
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Rent</span> (3 months)</label>
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Rent</span> (4 months)</label>
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Rent</span> (6 months)</label>
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                    <hr class="hr-small">
+                                                  </div>
+                                                      <div class="rental-period">
+                                                    <div class="row">
+                                                          <div class="col-xs-9 col-sm-7 addons-txt">
+                                                        <div class="radioChecked">
+                                                              <label class="radio rental-label"> <span class="text-red">Buy</span> </label>
+                                                            </div>
+                                                      </div>
+                                                          <div class="col-xs-3 col-sm-5 addons-price"> <span class="product-price">Retail: $00.00</span> <span class="product-price"><span class="product-price-from">Wholesale: $00.00</span> </span> </div>
+                                                        </div>
+                                                  </div>
+                                                      <div class="padding"></div>
+                                                      <p><a class="btn btn-solid-light btn-large btn-justified" href="#">Instructors - Request Sample</a></p>
+                                                    </div>
+                                              </div>
+                                                </div>
+                                          </div>
+                                            </div>
+                                        <div role="tabpanel" class="tab-pane fade active in" id="packages" aria-label="packages-tab" aria-hidden="false"></div>
+                                      </div>
+                                        </div>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                              <!-- DIGITAL -->
+                              <div role="tabpanel" class="tab-pane fade" id="digital" aria-label="digital">
+                            <section class="product-content">
+                                  <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 hidden-xs">
+                                      <div class="row">
+                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> <a href="#" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title">
+                                          <div class="padding-small"></div>
+                                          <hgroup>
+                                        <p><strong> Psychology in Everyday Life</strong></p>
+                                        <p class="small">Fourth&nbsp;&nbsp;Edition<span class="specs-divider" aria-hidden="true">|</span> ©2017</p>
+                                        <p class="small">David G. Myers; C. Nathan DeWall</p>
+                                      </hgroup>
+                                          <div class="padding-small"></div>
+                                          <div class="btn-justified"> <a data-toggle="modal" data-target="#availablesamples" class="btn btn-product-side btn-solid-light btn-block">Instructors - Request Sample</a> <a data-toggle="modal" data-target="#viewdemo" class="btn btn-solid-light btn-product-side btn-block">View Demo</a> <a href="#" class="btn btn-solid-light btn-product-side btn-block">Tailor This Text</a> <a href="#" class="btn btn-product-side btn-solid-light btn-block">Find Your Rep</a></div>
+                                          <div class="padding"></div>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 product-content-body">
+                                      <h1 class="hidden">Digital Options</h1>
+                                      <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><img alt="LaunchPad icon" class="img-responsive digital-icon" src="https://www.macmillanlearning.com/Catalog/uploadedImages/Content/BFW/Home/SS_Search_Icons_LaunchPad.png"/></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                          <h2 class="h-size2">LaunchPad</h2>
+                                          <p>Get the eBook, do assignments, take quizzes, prepare for exams and more, to help you achieve success in class.</p>
+                                          <p> <a class="btn btn-primary btn-small btn-inline" href="#" aria-label="Learn more about LaunchPad">Learn About LaunchPad</a><a class="btn btn-primary btn-inline btn-small" href="#" aria-label="Schedule a LaunchPad Demo">Schedule LaunchPad Demo</a><a class="btn btn-solid-light btn-inline btn-small" href="#" aria-label="Learn more about LaunchPad">Go to LaunchPad</a></p>
+                                        </div>
+                                  </div>
+                                      <hr class="hr-white"/>
+                                      <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><img alt="iClicker icon" class="img-responsive digital-icon" src="https://www.macmillanlearning.com/Catalog/uploadedImages/Content/BFW/Home/SS_Search_Icons_iClicker.png"/></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-9 col-xs-9">
+                                          <h2 class="h-size2">iClicker</h2>
+                                          <p>Stay engaged in class with our student response system, show your instructor that you're listening and prove what you know.</p>
+                                          <p> <a class="btn btn-primary btn-small btn-inline" href="#" aria-label="Learn more about LaunchPad">Learn About iClicker</a><a class="btn btn-primary btn-inline btn-small" href="#" aria-label="Schedule a LaunchPad Demo">Schedule iClicker Demo</a></p>
+                                        </div>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                              <!-- PREVIEW -->
+                              <div role="tabpanel" class="tab-pane fade" id="preview" aria-label="preview">
+                            <section id="preview-section">
+                                  <div class="row"> 
+                                <!-- SIDEBAR MENU -->
+                                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+                                      <div class="nav flex-column list-group device-small" id="preview-tab" role="tablist" aria-orientation="vertical"> <a class="list-group-item" id="preview-home-tab" tabindex="0" alt="preview home" data-toggle="tab" href="#preview-home" role="tab" aria-labelledby="preview home" aria-controls="preview-home" aria-selected="false">Home </a> <a class="list-group-item" id="preview-features-tab" tabindex="0" alt="preview features" data-toggle="tab" href="#preview-features" role="tab" aria-labelledby="preview features" aria-controls="preview-features" aria-selected="false">Features</a> <a class="list-group-item" id="preview-new-tab" tabindex="0" alt="preview new" data-toggle="tab" href="#preview-new" role="tab" aria-labelledby="preview new" aria-controls="preview-new" aria-selected="false">New to This Edition</a> <a class="list-group-item" id="preview-reviews-tab" tabindex="0" alt="preview reviews" data-toggle="tab" href="#preview-reviews" role="tab" aria-labelledby="preview reviews" aria-controls="preview-reviews" aria-selected="false">Reviews</a> <a class="list-group-item" id="preview-custom-tab1" tabindex="0" alt="preview custom tab one" data-toggle="tab" href="#preview-custom-tab1" role="tab" aria-labelledby="preview custom tab one" aria-controls="preview-custom-tab1" aria-selected="false">Custom Tab One</a> <a class="list-group-item" id="preview-custom-tab2" tabindex="0" alt="preview custom tab two" data-toggle="tab" href="#preview-custom-tab2" role="tab" aria-labelledby="preview custom tab two" aria-controls="preview-custom-tab2" aria-selected="false">Custom Tab Two</a> </div>
+                                    </div>
+                                <!-- /END SIDEBAR MENU -->
+                                <div class="col-xs-12 col-sm-9 col-md-10" style="padding:0;">
+                                      <div class="tab-content" id="preview-tab-content">
+                                    <div class="tab-pane slide active in" id="preview-home" role="tabpanel" aria-labelledby="preview-home-tab" style="background:#5d9dfe;">
+                                          <div class="preview-content-margin">
+                                        <div class="preview-content-inner"  style="padding:10% 5%;">
+                                              <div class="container">
+                                            <div class="row">
+                                                  <div class="col-md-5">
+                                                <section class="product-content"> <a href="#" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title"> </section>
+                                              </div>
+                                                  <div class="col-md-7"  style="padding:5%;">
+                                                <h2 class="serif">Psychological science—for every student: No assumptions. No prerequisites.</h2>
+                                                <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                </div>
+                                          </div>
+                                            </div>
+                                      </div>
+                                        </div>
+                                    <div class="tab-pane slide" id="preview-features" role="tabpanel" aria-labelledby="preview-features-tab">
+                                          <div class="preview-content-margin" style="background:#ffffff;">
+                                        <div class="preview-content-inner">
+                                              <div class="row-fluid">
+                                            <div class="col-md-12">
+                                                  <p class="section-title h-size6">Features</p>
+                                                  <div class="bar"></div>
+                                                </div>
+                                            <div class="row-fluid">
+                                                  <div class="col-md-6">
+                                                <p class="h-size3">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                                <hr/>
+                                                <p class="h-size3">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                  <div class="col-md-6">
+                                                <p class="h-size3">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                                <hr/>
+                                                <p class="h-size3">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                </div>
+                                            <div class="padding"></div>
+                                          </div>
+                                            </div>
+                                      </div>
+                                        </div>
+                                    <div class="tab-pane slide" id="preview-new" role="tabpanel" aria-labelledby="preview-new-tab">
+                                          <div class="preview-content-margin" style="background:#cff3f9;">
+                                        <div class="preview-content-inner">
+                                              <div class="row-fluid">
+                                            <div class="col-md-12">
+                                                  <p class="section-title h-size6">New to This Edition</p>
+                                                  <div class="bar"></div>
+                                                </div>
+                                            <div class="row-fluid">
+                                                  <div class="col-md-4">
+                                                <p class="h-size5">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                  <div class="col-md-4">
+                                                <p class="h-size5">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                  <div class="col-md-4">
+                                                <p class="h-size5">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                </div>
+                                            <div class="row-fluid">
+                                                  <div class="col-md-4">
+                                                <p class="h-size5">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                  <div class="col-md-4">
+                                                <p class="h-size5">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                  <div class="col-md-4">
+                                                <p class="h-size5">Psychological science—for every student: No assumptions. No prerequisites.</p>
+                                                <p class="small">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+                                              </div>
+                                                </div>
+                                            <div class="padding"></div>
+                                          </div>
+                                            </div>
+                                      </div>
+                                        </div>
+                                    <div class="tab-pane fade" id="preview-reviews" role="tabpanel" aria-labelledby="preview-reviews-tab">
+                                          <div class="preview-content-margin" style="background:#b0daff;">
+                                        <div class="preview-content-inner">
+                                              <div class="row-fluid">
+                                            <div class="col-offset-md-3 col-md-6">
+                                                  <blockquote>"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."</blockquote>
+                                                </div>
+                                          </div>
+                                            </div>
+                                      </div>
+                                        </div>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                              <!-- CONTENTS -->
+                              <div role="tabpanel" class="tab-pane fade" id="contents" aria-label="contents">
+                            <section class="product-content">
+                                  <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 hidden-xs">
+                                      <div class="row">
+                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> <a href="#" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title">
+                                          <div class="padding-small"></div>
+                                          <hgroup>
+                                        <p><strong> Psychology in Everyday Life</strong></p>
+                                        <p class="small">Fourth&nbsp;&nbsp;Edition<span class="specs-divider" aria-hidden="true">|</span> ©2017</p>
+                                        <p class="small">David G. Myers; C. Nathan DeWall</p>
+                                      </hgroup>
+                                          <div class="padding-small"></div>
+                                          <div class="btn-justified"> <a data-toggle="modal" data-target="#availablesamples" class="btn btn-product-side btn-solid-light btn-block">Instructors - Request Sample</a> <a data-toggle="modal" data-target="#viewdemo" class="btn btn-solid-light btn-product-side btn-block">View Demo</a> <a href="#" class="btn btn-solid-light btn-product-side btn-block">Tailor This Text</a> <a href="#" class="btn btn-product-side btn-solid-light btn-block">Find Your Rep</a></div>
+                                          <div class="padding"></div>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 product-content-body">
+                                      <h2 class="h-size2">Table of Contents</h2>
+                                      <div class="padding"></div>
+                                      <div>
+                                    <p>Preface</p>
+                                    <p>Time Management: Or, How to Be a Great Student and Still Have a Life</p>
+                                    <p>Chapter 1: Psychology’s Roots, Big Ideas, and Critical Thinking Tools</p>
+                                    <p>Chapter 2: The Biology of Mind and Consciousness</p>
+                                    <p>Chapter 3: Developing Through the Life Span</p>
+                                    <p>Chapter 4: Sex, Gender, and Sexuality</p>
+                                    <p>Chapter 5: Sensation and Perception</p>
+                                    <p>Chapter 6: Learning</p>
+                                    <p>Chapter 7: Memory</p>
+                                    <p>Chapter 8: Thinking, Language, and Intelligence</p>
+                                    <p>Chapter 9: Motivation and Emotion</p>
+                                    <p>Chapter 10: Stress, Health, and Human Flourishing</p>
+                                    <p>Chapter 11: Social Psychology</p>
+                                    <p>Chapter 12: Personality</p>
+                                    <p>Chapter 13: Psychological Disorders</p>
+                                    <p>Chapter 14: Therapy</p>
+                                    <p>Appendix A: Statistical Reasoning in Everyday Life</p>
+                                    <p>Appendix B: Psychology at Work</p>
+                                    <p>Appendix C: Subfields of Psychology</p>
+                                    <p>Appendix D: Complete Chapter Reviews</p>
+                                    <p>Appendix E: Answers to <i>Chapter Test</i> Questions</p>
+                                    <p>Glossary</p>
+                                    <p>Glosario</p>
+                                    <p>References</p>
+                                    <p>Name Index</p>
+                                    <p>Subject Index</p>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                              <!-- AUTHORS -->
+                              <div role="tabpanel" class="tab-pane fade" id="authors" aria-label="authors">
+                            <section class="product-content">
+                                  <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 hidden-xs">
+                                      <div class="row">
+                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> <a href="#" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title">
+                                          <div class="padding-small"></div>
+                                          <hgroup>
+                                        <p><strong> Psychology in Everyday Life</strong></p>
+                                        <p class="small">Fourth&nbsp;&nbsp;Edition<span class="specs-divider" aria-hidden="true">|</span> ©2017</p>
+                                        <p class="small">David G. Myers; C. Nathan DeWall</p>
+                                      </hgroup>
+                                          <div class="padding-small"></div>
+                                          <div class="btn-justified"> <a data-toggle="modal" data-target="#availablesamples" class="btn btn-product-side btn-solid-light btn-block">Instructors - Request Sample</a> <a data-toggle="modal" data-target="#viewdemo" class="btn btn-solid-light btn-product-side btn-block">View Demo</a> <a href="#" class="btn btn-solid-light btn-product-side btn-block">Tailor This Text</a> <a href="#" class="btn btn-product-side btn-solid-light btn-block">Find Your Rep</a></div>
+                                          <div class="padding"></div>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 product-content-body">
+                                      <h2 class="hidden" aria-label="Authors" aria-hidden="false">Authors</h2>
+                                      <div class="row">
+                                    <div class="col-md-3 col-sm-6"><img class="img-responsive" alt="" src="https://prod-cat-files.macmillan.cloud/MediaResources/Authors/207W/130170176.jpg" /></div>
+                                    <div class="col-md-9 col-sm-12">
+                                          <h3 class="h-size2">Author Name</h3>
+                                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis. </p>
+                                        </div>
+                                  </div>
+                                      <hr class="hr-white" />
+                                      <div class="row">
+                                    <div class="col-md-3 col-sm-6"><img class="img-responsive" alt="" src="https://prod-cat-files.macmillan.cloud/MediaResources/Authors/207W/130170176.jpg" /></div>
+                                    <div class="col-md-9 col-sm-12">
+                                          <h3 class="h-size2">Author Name</h3>
+                                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis. </p>
+                                        </div>
+                                  </div>
+                                      <hr class="hr-white"/>
+                                      <div class="row">
+                                    <div class="col-md-3 col-sm-6"><img class="img-responsive" alt="" src="https://prod-cat-files.macmillan.cloud/MediaResources/Authors/207W/130170176.jpg" /></div>
+                                    <div class="col-md-9 col-sm-12">
+                                          <h3 class="h-size2">Author Name</h3>
+                                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis. </p>
+                                        </div>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                              <!-- RESOURCES -->
+                              <div role="tabpanel" class="tab-pane fade" id="resources" aria-label="resources">
+                            <section class="product-content">
+                                  <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 hidden-xs">
+                                      <div class="row">
+                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> <a href="#" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title">
+                                          <div class="padding-small"></div>
+                                          <hgroup>
+                                        <p><strong> Psychology in Everyday Life</strong></p>
+                                        <p class="small">Fourth&nbsp;&nbsp;Edition<span class="specs-divider" aria-hidden="true">|</span> ©2017</p>
+                                        <p class="small">David G. Myers; C. Nathan DeWall</p>
+                                      </hgroup>
+                                          <div class="padding-small"></div>
+                                          <div class="btn-justified"> <a data-toggle="modal" data-target="#availablesamples" class="btn btn-product-side btn-solid-light btn-block">Instructors - Request Sample</a> <a data-toggle="modal" data-target="#viewdemo" class="btn btn-solid-light btn-product-side btn-block">View Demo</a> <a href="#" class="btn btn-solid-light btn-product-side btn-block">Tailor This Text</a> <a href="#" class="btn btn-product-side btn-solid-light btn-block">Find Your Rep</a></div>
+                                          <div class="padding"></div>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 product-content-body">
+                                      <div class="price-box-padding" id="Resource Options"> 
+                                    <!--DELETE INSTRUCTOR RESOURCE BANNER AFTER SIGN IN --> 
+                                    
+                                    <!--INSTRUCTOR RESOURCE VISIBLE AFTER LOGGED IN -->
+                                    
+                                    <div class="row">
+                                          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <h1 class="h-size2" aria-label="Instructor Resources">Instructor Resources</h1>
+                                      </div>
+                                          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="text-right" style="margin-top:16px;">
+                                              <button type="button" class="btn btn-solid-light icon btn-inline">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon points="8.42 17.96 21 5.83 19.59 4.42 7.81 15.77 3.44 11.4 2.02 12.81 6.37 17.16 6.36 17.17 7.77 18.58 7.78 18.57 7.79 18.58 8.42 17.96"/>
+                                              </svg>
+                                          Deselect All</button>
+                                              <button type="button" class="btn btn-primary btn-inline" data-toggle="modal" data-target="#confirmdownload">Request Selected</button>
+                                            </div>
+                                      </div>
+                                        </div>
+                                    <!-- / INSTRUCTOR RESOURCE VISIBLE AFTER LOGGED IN -->
+                                    
+                                    <div class="padding"></div>
+                                    <!--INSTRUCTOR RESOURCE OPTIONS -->
+                                    <div class="resource-entry">
+                                          <div class="col"><a class="accordion-toggle collapsed" data-toggle="collapse" href="#chapters" aria-expanded="false"><span class="expand-plus-caret-down"></span></a></div>
+                                          <div class="col"><img alt="request locked icon" src="images/document.svg"/> </div>
+                                          <div class="col">
+                                        <hgroup>
+                                              <h3 class="h-size4"> Resource Name </h3>
+                                              <small>Author Name<span class="specs-divider"> | </span>First Edition<span class="specs-divider"> | </span>©2018<span class="specs-divider"> | </span>ISBN:97800000000000</small>
+                                              <p class="small">Description of Instructor Resource here.</p>
+                                            </hgroup>
+                                        <div class="panel-collapse collapse well" id="chapters" aria-expanded="false">
+                                              <div class="resource-tier">
+                                            <div class="resource-entry">
+                                                  <div class="col radio-select">
+                                                <input class="radio" name="select-chapters" value="select-all-chapters" type="radio" onclick="selectall();" />
+                                              </div>
+                                                  <div class="col no-icon"> </div>
+                                                  <div class="col select-label">
+                                                <label for="select-all-chapters" style="margin: 0;padding: 0;">Select All Chapters</label>
+                                              </div>
+                                                </div>
+                                            <div class="resource-entry">
+                                                  <div class="col radio-select">
+                                                <input class="radio" name="select-chapters" value="select-individual-chapters" type="radio" onclick="selectitem();" />
+                                              </div>
+                                                  <div class="col no-icon"> </div>
+                                                  <div class="col select-label">
+                                                <label for="select-chapters" style="margin: 0;padding: 0;">Select Individual Chapters</label>
+                                              </div>
+                                                </div>
+                                                   <div class="show" id="select-items"  aria-expanded="false">
+                                                  <div class="resource-entry">
+                                                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                    <div class="well-sm">
+                                                          <div class="form-group">
+                                                        <div class="checkbox">
+                                                              <label>
+                                                            <input type="checkbox" name="chapters" id="chapter1" value="chapter1">
+                                                            Chapter 1 </label>
+                                                            </div>
+                                                        <div class="checkbox">
+                                                              <label>
+                                                            <input type="checkbox" name="chapters" id="chapter2" value="chapter2">
+                                                            Chapter 2 </label>
+                                                            </div>
+                                                      </div>
+                                                        </div>
+                                                  </div>
+                                                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                    <div class="well-sm">
+                                                          <div class="form-group">
+                                                        <label class="control-label hidden">Additional Chapters</label>
+                                                        <div class="checkbox">
+                                                              <label>
+                                                            <input type="checkbox" name="chapters" id="chapter3" value="chapter3">
+                                                            Chapter 3 </label>
+                                                            </div>
+                                                        <div class="checkbox">
+                                                              <label>
+                                                            <input type="checkbox" name="chapters" id="chapter4" value="chapter4">
+                                                            Chapter 4 </label>
+                                                            </div>
+                                                      </div>
+                                                        </div>
+                                                  </div>
+                                                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                    <div class="well-sm">
+                                                          <div class="form-group">
+                                                        <label class="control-label hidden">Additional Chapters</label>
+                                                        <div class="checkbox">
+                                                              <label>
+                                                            <input type="checkbox" name="chapters" id="chapter5" value="chapter5">
+                                                            Chapter 5 </label>
+                                                            </div>
+                                                        <div class="checkbox">
+                                                              <label>
+                                                            <input type="checkbox" name="chapters" id="chapter6" value="chapter6">
+                                                            Chapter 6 </label>
+                                                            </div>
+                                                      </div>
+                                                  </div>
+                                                    </div>
+                                              </div>
+                                                </div>
+                                          </div>
+                                            </div>
+                                      </div>
+                                        </div>
+                                    <div class="resource-entry">
+                                          <div class="col">
+                                        <input class="checkbox" type="checkbox" name="resource1" id="resource1" value="resource1">
+                                      </div>
+                                          <div class="col"><img src="images/document.svg"/> </div>
+                                          <div class="col">
+                                        <hgroup>
+                                              <h3 class="h-size4"> Resource Name </h3>
+                                              <small>Author Name<span class="specs-divider"> | </span>First Edition<span class="specs-divider"> | </span>©2018<span class="specs-divider"> | </span>ISBN:97800000000000</small>
+                                              <p class="small">Description of Instructor Resource here.</p>
+                                            </hgroup>
+                                      </div>
+                                        </div>
+                                    <div class="resource-entry">
+                                          <div class="col">
+                                        <input class="checkbox" type="checkbox" name="resource2" id="resource2" value="resource2">
+                                      </div>
+                                          <div class="col"><img src="images/document.svg"/> </div>
+                                          <div class="col">
+                                        <hgroup>
+                                              <h3 class="h-size4"> Resource Name </h3>
+                                            </hgroup>
+                                      </div>
+                                        </div>
+                                    <div class="resource-entry">
+                                          <div class="col"><a class="accordion-toggle collapsed" data-toggle="collapse" href="#coursepacks" aria-expanded="false"><span class="expand-plus-caret-down"></span></a></div>
+                                          <div class="col"><img alt="document icon" src="images/document.svg"/> </div>
+                                          <div class="col">
+                                        <hgroup>
+                                              <h3 class="h-size4"> Coursepacks </h3>
+                                            </hgroup>
+                                        <div class="panel-collapse collapse well" id="coursepacks" aria-expanded="false">
+                                              <div class="resource-tier">
+                                            <div class="resource-entry">
+                                                  <div class="col">
+                                                <input class="checkbox" type="checkbox" name="coursepack-resource1" id="coursepack-resource1" value="coursepack-resource1">
+                                              </div>
+                                                  <div class="col"><img alt="document icon" src="images/document.svg"/> </div>
+                                                  <div class="col">
+                                                <hgroup>
+                                                      <h3 class="h-size4"> Resource Name </h3>
+                                                      <small>Author Name<span class="specs-divider"> | </span>First Edition<span class="specs-divider"> | </span>©2018<span class="specs-divider"> | </span>ISBN:97800000000000</small>
+                                                      <p class="small">Description of Instructor Resource here.</p>
+                                                    </hgroup>
+                                              </div>
+                                                </div>
+                                            <div class="resource-entry">
+                                                  <div class="col"><a class="accordion-toggle collapsed" data-toggle="collapse" href="#blackboard" aria-expanded="false"><span class="expand-plus-caret-down"></span></a></div>
+                                                  <div class="col"><img src="images/document.svg"/> </div>
+                                                  <div class="col">
+                                                <hgroup>
+                                                      <h3 class="h-size4"> Blackboard </h3>
+                                                    </hgroup>
+                                                <div class="resource-tier">
+                                                      <div class="resource-entry">
+                                                    <div class="col radio-select">
+                                                          <input class="radio" name="select-coursepacks" value="select-all-coursepacks" onclick="selectall();" type="radio">
+                                                        </div>
+                                                    <div class="col no-icon"> </div>
+                                                    <div class="col select-label">
+                                                          <label for="select-all-coursepacks" style="margin: 0;padding: 0;">Select All Coursepacks</label>
+                                                        </div>
+                                                  </div>
+                                                      <div class="resource-entry">
+                                                    <div class="col radio-select">
+                                                          <input class="radio" name="select-coursepacks" value="select-coursepacks" onclick="selectall();" type="radio">
+                                                        </div>
+                                                    <div class="col no-icon"> </div>
+                                                    <div class="col select-label">
+                                                          <label for="select-coursepacks" style="margin: 0;padding: 0;">Select Individual Coursepacks</label>
+                                                        </div>
+                                                  </div>
+                                                      <div id="blackboard" aria-expanded="false" class="panel-collapse collapsed">
+                                                    <div>
+                                                          <div class="resource-entry">
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                              <div class="well-sm">
+                                                            <div class="form-group">
+                                                                  <div class="checkbox">
+                                                                <label>
+                                                                      <input name="option1" id="option1" value="option1" type="checkbox">
+                                                                      Option One </label>
+                                                              </div>
+                                                                </div>
+                                                          </div>
+                                                            </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                              <div class="well-sm">
+                                                            <div class="form-group">
+                                                                  <div class="checkbox">
+                                                                <label>
+                                                                      <input name="option2" id="option2" value="option2" type="checkbox">
+                                                                      Option Two </label>
+                                                              </div>
+                                                                </div>
+                                                          </div>
+                                                            </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                                              <div class="well-sm">
+                                                            <div class="form-group">
+                                                                  <div class="checkbox">
+                                                                <label>
+                                                                      <input name="option3" id="option3" value="option3" type="checkbox">
+                                                                      Option Three </label>
+                                                              </div>
+                                                                </div>
+                                                          </div>
+                                                            </div>
+                                                      </div>
+                                                        </div>
+                                                  </div>
+                                                    </div>
+                                              </div>
+                                                </div>
+                                          </div>
+                                            </div>
+                                      </div>
+                                        </div>
+                                    <div class="row">
+                                          <div class="col-xs-12">
+                                        <div class="text-right" style="margin-top:16px;">
+                                              <button type="button" class="btn btn-secondary btn-inline">Select All</button>
+                                              <button type="button" class="btn btn-primary btn-inline" data-toggle="modal" data-target="#confirmdownload">Request Selected</button>
+                                            </div>
+                                      </div>
+                                        </div>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                              <!-- VIDEOS -->
+                              <div role="tabpanel" class="tab-pane fade" id="videos" aria-label="videos">
+                            <section class="product-content">
+                                  <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 hidden-xs">
+                                      <div class="row">
+                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> <a href="#" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title">
+                                          <div class="padding-small"></div>
+                                          <hgroup>
+                                        <p><strong> Psychology in Everyday Life</strong></p>
+                                        <p class="small">Fourth&nbsp;&nbsp;Edition<span class="specs-divider" aria-hidden="true">|</span> ©2017</p>
+                                        <p class="small">David G. Myers; C. Nathan DeWall</p>
+                                      </hgroup>
+                                          <div class="padding-small"></div>
+                                          <div class="btn-justified"> <a data-toggle="modal" data-target="#availablesamples" class="btn btn-product-side btn-solid-light btn-block">Instructors - Request Sample</a> <a data-toggle="modal" data-target="#viewdemo" class="btn btn-solid-light btn-product-side btn-block">View Demo</a> <a href="#" class="btn btn-solid-light btn-product-side btn-block">Tailor This Text</a> <a href="#" class="btn btn-product-side btn-solid-light btn-block">Find Your Rep</a></div>
+                                          <div class="padding"></div>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 product-content-body">
+                                      <h2 class="hidden" aria-label="Videos" aria-hidden="false">Videos</h2>
+                                      <div class="video-container">
+                                    <div class="row">
+                                          <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <div class="list-item-inner">
+                                              <iframe width="100%" src="https://www.youtube.com/embed/UmZAVXfPHNE?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                              <div class="list-specs">
+                                            <p class="h-size5">Video Title Here</p>
+                                            <p class="small">Description</p>
+                                            <hr class="hr-small"/>
+                                            <p class="small text-muted">Author Talks</p>
+                                          </div>
+                                            </div>
+                                        <div class="padding"></div>
+                                      </div>
+                                          <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <div class="list-item-inner">
+                                              <iframe width="100%" src="https://www.youtube.com/embed/Mx5mu56o9uQ?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                              <div class="list-specs">
+                                            <p class="h-size5">Video Title Here</p>
+                                            <p class="small">Description</p>
+                                            <hr class="hr-small"/>
+                                            <p class="small text-muted">Author Talks</p>
+                                          </div>
+                                            </div>
+                                        <div class="padding"></div>
+                                      </div>
+                                          <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <div class="list-item-inner">
+                                              <iframe width="100%" src="https://www.youtube.com/embed/dlE76e0k0tM?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                              <div class="list-specs">
+                                            <p class="h-size5">Video Title Here</p>
+                                            <p class="small">Description</p>
+                                          </div>
+                                            </div>
+                                        <div class="padding"></div>
+                                      </div>
+                                        </div>
+                                    <div class="row">
+                                          <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <div class="list-item-inner">
+                                              <iframe width="100%" src="https://www.youtube.com/embed/E2jYdEO18nU?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                              <div class="list-specs">
+                                            <p class="h-size5">Video Title Here</p>
+                                            <p class="small">Description</p>
+                                            <hr class="hr-small"/>
+                                            <p class="small text-muted">Training and Demos</p>
+                                          </div>
+                                            </div>
+                                        <div class="padding"></div>
+                                      </div>
+                                          <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <div class="list-item-inner">
+                                              <iframe width="100%" src="https://www.youtube.com/embed/dlE76e0k0tM?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                              <div class="list-specs">
+                                            <p class="h-size5">Video Title Here</p>
+                                            <p class="small">Description</p>
+                                          </div>
+                                            </div>
+                                        <div class="padding"></div>
+                                      </div>
+                                          <div class="col-md-4 col-sm-12 col-xs-12">
+                                        <div class="list-item-inner">
+                                              <iframe width="100%" src="https://www.youtube.com/embed/Mx5mu56o9uQ?showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                              <div class="list-specs">
+                                            <p class="h-size5">Video Title Here</p>
+                                            <p class="small">Description</p>
+                                          </div>
+                                            </div>
+                                        <div class="padding"></div>
+                                      </div>
+                                        </div>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                              <!-- RELATED TITLES -->
+                              <div role="tabpanel" class="tab-pane fade" id="related" aria-label="related titles">
+                            <section class="product-content">
+                                  <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 hidden-xs">
+                                      <div class="row">
+                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12"> <a href="#" class="btn btn-white btn-small" style="border-bottom-left-radius:0;border-bottom-right-radius:0;"><img src="images/icon-look@2x.png" alt="Look Inside" class="look-icon"/>Look Inside</a> <img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive" alt="Product Title">
+                                          <div class="padding-small"></div>
+                                          <hgroup>
+                                        <p><strong> Psychology in Everyday Life</strong></p>
+                                        <p class="small">Fourth&nbsp;&nbsp;Edition<span class="specs-divider" aria-hidden="true">|</span> ©2017</p>
+                                        <p class="small">David G. Myers; C. Nathan DeWall</p>
+                                      </hgroup>
+                                          <div class="padding-small"></div>
+                                          <div class="btn-justified"> <a data-toggle="modal" data-target="#availablesamples" class="btn btn-product-side btn-solid-light btn-block">Instructors - Request Sample</a> <a data-toggle="modal" data-target="#viewdemo" class="btn btn-solid-light btn-product-side btn-block">View Demo</a> <a href="#" class="btn btn-solid-light btn-product-side btn-block">Tailor This Text</a> <a href="#" class="btn btn-product-side btn-solid-light btn-block">Find Your Rep</a></div>
+                                          <div class="padding"></div>
+                                        </div>
+                                  </div>
+                                    </div>
+                                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 product-content-body">
+                                      <h2 class="hidden" aria-label="Related Titles" aria-hidden="false">Related Titles</h2>
+                                      <hr class="hr-white">
+                                      <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-4"><img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781464154072.jpg" class="img-responsive product-related" alt=""></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8">
+                                          <div class="row">
+                                        <div class="col-lg-9 col-md-9 col-sm-12">
+                                              <hgroup>
+                                            <h3 class="h-size4">Psychology in Everday Life</h3>
+                                            <small>David G. Myers, C. Nathan DeWall<span class="specs-divider"> | </span>Fourth Edition<span class="specs-divider"> | </span>©2017<span class="specs-divider"> | </span>ISBN:97814641995040</small> </hgroup>
+                                            </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                              <p><a class="btn btn-primary" href="#"  aria-label="Learn more about title one">Learn More</a></p>
+                                            </div>
+                                      </div>
+                                        </div>
+                                  </div>
+                                      <hr class="hr-white">
+                                      <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-4"><img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781464154386.jpg" class="img-responsive product-related" alt=""></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8">
+                                          <div class="row">
+                                        <div class="col-lg-9 col-md-9 col-sm-12">
+                                              <hgroup>
+                                            <h3 class="h-size4">Psychology in Everday Life</h3>
+                                            <small>David G. Myers, C. Nathan DeWall<span class="specs-divider"> | </span>Fourth Edition<span class="specs-divider"> | </span>©2017<span class="specs-divider"> | </span>ISBN:97814641995040</small> </hgroup>
+                                            </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                              <p><a class="btn btn-primary" href="#" aria-label="Learn more about title two">Learn More</a></p>
+                                            </div>
+                                      </div>
+                                        </div>
+                                  </div>
+                                      <hr class="hr-white">
+                                      <div class="row">
+                                    <div class="col-lg-2 col-md-2 col-sm-4"><img src="https://prod-cat-files.macmillan.cloud/MediaResources/Jackets/high_res/9781319013738.jpg" class="img-responsive product-related" alt=""></div>
+                                    <div class="col-lg-10 col-md-10 col-sm-8">
+                                          <div class="row">
+                                        <div class="col-lg-9 col-md-9 col-sm-12">
+                                              <hgroup>
+                                            <h3 class="h-size4">Psychology in Everday Life</h3>
+                                            <small>David G. Myers, C. Nathan DeWall<span class="specs-divider"> | </span>Fourth Edition<span class="specs-divider"> | </span>©2017<span class="specs-divider"> | </span>ISBN:97814641995040</small> </hgroup>
+                                            </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                              <p><a class="btn btn-primary" href="#"  aria-label="Learn more about title three">Learn More</a></p>
+                                            </div>
+                                      </div>
+                                        </div>
+                                  </div>
+                                    </div>
+                              </div>
+                                </section>
+                          </div>
+                            </div>
+                      </div>
+                        </div>
+                  </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+      </div>
+        </main>
+  </div>
+    </div>
+<div w3-include-html="shared-footer.html"></div>
+<script>
+    w3IncludeHTML();
+    </script> 
+<script src="js/classie.js"></script> 
+<script src="js/mlpushmenu.js"></script> 
+\<script src="js/tab-collapse.js" type="text/javascript"></script> 
+<script>
+$('#tabmobile').tabCollapse();
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+</script> 
+<script>
+			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ), {
+				type : 'cover'
+			} );
+		</script> 
+<script>
+		$(document).ready(function(){
+	$('#nav-icon4').click(function(){
+		$(this).toggleClass('mp-level-open');
+	});
+});</script> 
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("see-all");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script> 
+<script>
+function selectall(){
+  document.getElementById('select-items').style.display ='none';
+}
+function selectitem(){
+  document.getElementById('select-items').style.display = 'block';
+}</script>
+</body>
+</html>

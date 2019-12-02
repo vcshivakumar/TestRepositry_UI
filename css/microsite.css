@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/* CSS Macmillan Learning Microsite */
+
+
+.microsite-content {
+	background-color: #EFF2F3;
+}
+#microsite-tab-content {
+	background-color: #ffffff;
+	padding: 0px;
+}
+.mp-pushed .microsite-content {
+	margin-left: 0;
+}
+.microsite-spacing {
+	margin:0;
+	padding:0;
+}
+.microsite-spacing-right{
+	padding-right:0;
+}
+
+#microsite-tab {
+	font-size:13px;
+}
+
+.microsite-content h1 {
+	font-size: 2.5em;
+}
+.microsite-content h2 {
+	font-size: 1.8em;
+}
+.microsite-content h3 {
+	font-weight: 600;
+	font-size: 1.7em;
+}
+.microsite-content h4 {
+	font-size: 1.25em;
+}
+.subhead {
+	font-weight: 200;
+}
+.microsite-content h1, .microsite-content h2, .microsite-content h3, .microsite-content h4 {
+	margin: 3px 0;
+}
+.microsite-content p {
+	margin: 16px 0 24px;
+	font-size: 1em;
+}
+.microsite-content img {
+	margin-bottom: 36px;
+}
+.microsite-content .image-column img {
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 640px;
+}
+.microsite-wrapper {
+	display: flex;
+	width: 100%;
+	margin: auto;
+	padding: 0;
+	margin-top: 0px;
+	min-height: 100%;
+}
+.microsite-full-height {
+	width: 100%;
+	display: inline-block;
+	min-height: 100vh;
+	padding: 5% 5% 8%;
+}
+.microsite-full-height-inner {
+	overflow: visible;
+}
+
+.microsite-100-height {
+	width: 100%;
+	display: inline-block;
+	min-height: 100%;
+	padding: 3% 5%;
+}
+
+.microsite-100-height:first-child {
+	padding:8% 5% 3%;
+}
+
+.microsite-100-height:last-child {
+	padding:3% 5% 8%;
+}
+
+.height-auto-page {
+	width: 100%;
+	background-color: transparent;
+	min-height: 100%;
+	position: relative;
+	overflow:visible;
+}
+
+
+/* SIDEBAR NAVIGATION */
+
+.microsite-sidebar {
+	height: 100%;
+	width: 220px;
+	position: fixed;
+	z-index: 1;
+	top: 86px;
+	left: 0;
+	overflow-x: hidden;
+}
+/* IMAGE + COPY */
+
+.image-column, .image-background-column {
+	width: 50%;
+	display: inline-block;
+	background-size: cover;
+	background-position: center;
+	background-repeat: none;
+	min-height: 100vh;
+}
+.copy-column {
+	width: 50%;
+	display: inline-block;
+	min-height: 100vh;
+}
+.image-column-centered, .copy-column-centered {
+	padding: 10%;
+	position: relative;
+	top: 25%;
+	left: 25%;
+	transform: translate(-25%, -25%);
+	overflow: visible;
+}
+
+@media only screen and (max-width: 991px) {
+.microsite-wrapper {
+	display: block;
+	width: 100%;
+	min-height: 100%;
+}
+.image-background-column {
+	width: 100%;
+}
+.image-column, .copy-column {
+	width: 100%;
+	min-height: 100%;
+}
+.image-column-centered, .copy-column-centered, .microsite-full-centered {
+	padding: 10%;
+	position: relative !important;
+	top: 0% !important;
+	left: 0% !important;
+	transform: translate(0%, 0%) !important;
+	overflow: visible;
+}
+.microsite-content-center.full-page {
+	height: 100%;
+}
+
+.wide {
+	width:100% !important;
+	top:0%;
+	transform: translate(0%, 0%);
+}
+
+.wide h1, .wide h2.subhead, .wide p {
+	width:100% !important;
+}
+
+.microsite-content  .list-group {
+	margin-bottom:0 !important;
+}
+}
+/* COPY CENTER */
+
+
+.microsite-content-center {
+	text-align: center;
+}
+
+.microsite-full-centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: visible;
+}
+
+.wide {
+	width:80%;
+	top:40%;
+	transform: translate(-50%, -40%);
+}
+
+.wide h1, .wide h2.subhead, .wide p {
+	width:60%;
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+
+/* THREE COLUMN */
+
+
+
+
+/* EXPAND / COLLAPSE */
+
+.multi-level-menu {
+	margin-top: 36px;
+}
+.multi-level-menu ul {
+	list-style-type: none;
+	padding: 0;
+}
+.multi-level-menu label {
+	padding: 3px;
+	padding-left: 25px;
+	color: #080808;
+	font-size: 1em;
+}
+.multi-level-menu label strong {
+	font-size: 1.1em;
+}
+.multi-level-menu label a {
+	color: #080808;
+	text-decoration: none;
+	border-bottom: solid 2px inherit;
+	padding-bottom: 2px;
+}
+.multi-level-menu li a {
+	color: #080808;
+	text-decoration: none;
+	border-bottom: solid 2px #142a35;
+	padding-bottom: 2px;
+}
+.multi-level-menu li {
+	margin: 10px;
+	padding: 15px 10px 5px;
+	color: #080808;
+	background: #fff;
+	border-radius: 6px;
+}
+.multi-level-menu input[type=checkbox] {
+	display: none;
+}
+.multi-level-menu input[type=checkbox] ~ ul {
+	max-height: 0;
+	max-width: 0;
+	opacity: 0;
+	overflow: visible;
+}
+.multi-level-menu input[type=checkbox]:checked ~ ul {
+	max-height: 100%;
+	max-width: 100%;
+	opacity: 1;
+}
+.multi-level-menu input[type=checkbox] + label:before {
+	transform-origin: 25% 50%;
+	border: 6px solid transparent;
+	border-width: 6px 8px;
+	border-left-color: #142a35;
+	margin-left: -16px;
+	width: 0;
+	height: 0;
+	display: inline-block;
+	text-align: center;
+	content: '';
+	color: #0F222C;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+	position: absolute;
+	margin-top: 6px;
+}
+.multi-level-menu input[type=checkbox]:checked + label:before {
+	transform: rotate(90deg);
+}
+
+.multi-level-description li {
+	padding-top:0;
+	margin-top:0 !important;
+}
+
+.microsite-content .multi-level-description li p {
+	margin:0;
+	padding:0;
+	padding-left:3px;
+	font-size:0.9em;
+}
+
+
+.microsite-content .multi-level-description li p.level-one-text {
+	font-size:1em;
+}
+
+
+/* DIGITAL PRODUCT */
+
+.digital-home {
+	max-width:60%;
+	margin:auto;
+}
